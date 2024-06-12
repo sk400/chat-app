@@ -15,7 +15,7 @@ async function validateRequest(request) {
 
   const wh = new Webhook(webhookSecret);
 
-  wh.verify(payloadString, svixHeaders);
+  return wh.verify(payloadString, svixHeaders);
 }
 
 export async function POST(request) {
